@@ -1,0 +1,8 @@
+{
+    "[jade]": {
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.parameterHints": true,
+        "editor.tabSize": 2
+    },
+}

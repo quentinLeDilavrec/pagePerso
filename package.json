@@ -1,0 +1,31 @@
+{
+  "name": "pageperso",
+  "version": "1.0.0",
+  "description": "the template of the personal page",
+  "main": "run.sh",
+  "dependencies": {
+    "jstransformer-coffee-script": "^1.1.1",
+    "jstransformer-markdown-it": "^2.0.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quentinLeDilavrec/pagePerso.git"
+  },
+  "keywords": [
+    "pug",
+    "js",
+    "html",
+    "nodejs"
+  ],
+  "author": "quentin le dilavrec",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quentinLeDilavrec/pagePerso/issues"
+  },
+  "homepage": "https://github.com/quentinLeDilavrec/pagePerso#readme"
+}
