@@ -9,11 +9,13 @@ html(lang="en")
     // The Grid
     .w3-row-padding
       // Left Column
-      include quick.pug
-        // End Left Column
+      .w3-third
+        include quick.pug
+      // End Left Column
       // Right Column
-      include curiculum.pug
-        // End Right Column
+      .w3-twothird
+        include curiculum.pug
+      // End Right Column
       // End Grid
     // End Page Container
   include footer.pug

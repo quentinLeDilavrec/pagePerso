@@ -1,11 +1,10 @@
-.w3-third
-  .w3-white.w3-text-grey.w3-card-4
-    .w3-display-container
-      img(src='image/portrait.jpg' style='width:100%' alt='Avatar')
-      .w3-display-bottomleft.w3-container.w3-text-black
-        h2 #{firstname} #{name}
-    .w3-container
-      +print_quick_info(quick_info)
-      hr
-      +skillslist(skills)
-  br
+.w3-white.w3-text-grey.w3-card-4
+  .w3-display-container
+    img(src='image/portrait.jpg' style='width:100%' alt='Avatar')
+    .w3-display-bottomleft.w3-container.w3-text-black
+      h2 #{firstname} #{name}
+  .w3-container
+    +print_quick_info(quick_info)
+    hr
+    +skillslist(skills)
+br

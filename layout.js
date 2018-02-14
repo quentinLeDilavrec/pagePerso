@@ -38,7 +38,13 @@ var locals = {
   curiculum: [
     {
       name: { english: 'Experience', french: 'Experience' },
-      values: ['', '']
+      icon: 'fa-suitcase',
+      values: [{name:'aaa',date:{value:'24/24/1024 - ', current:true}}, {name:'aaa',date:{value:'24/24/1024 - ', current:false}}]
+    },
+    {
+      name: { english: 'Education', french: 'Education' },
+      icon: 'fa-certificate',
+      values: [{name:'aaa',date:{value:'24/24/1024 - ', current:true}}, {name:'aaa',date:{value:'24/24/1024 - ', current:false}}]
     },
   ],
   f: function (obj, language) {

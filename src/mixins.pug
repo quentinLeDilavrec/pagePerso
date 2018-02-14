@@ -29,17 +29,18 @@ mixin print_curiculum(_curiculum)
     each curi_elem in _curiculum
         .w3-container.w3-card.w3-white.w3-margin-bottom
             h2.w3-text-grey.w3-padding-16
-              i.fa.fa-certificate.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
+              i.fa.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal(class=curi_elem.icon)
               | #{f(curi_elem.name,language)}
             -var i = 0
             each v in curi_elem.values
               .w3-container
                 h5.w3-opacity
-                  b Front End Developer / w3schools.com
+                  b #{f(v.name,language)}
                 h6.w3-text-teal
                   i.fa.fa-calendar.fa-fw.w3-margin-right
-                  | Jan 2015 - 
-                  span.w3-tag.w3-teal.w3-round Current
+                  | #{v.date.value}
+                  if (v.date.current==true)
+                    span.w3-tag.w3-teal.w3-round Current
                 p
                   | Lorem ipsum dol
                 if (i+1 < curi_elem.values.length)
