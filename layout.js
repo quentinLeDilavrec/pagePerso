@@ -9,7 +9,7 @@ var pug = require('pug')
   , fn = pug.compile(str, { filename: path, pretty: true });
 
 var locals = {
-
+  pages: ['general','contact', 'portfolio', 'cv'],
 
   firstname: 'prenom',
   name: 'nom',
