@@ -17,7 +17,7 @@ var locals = {
   quick_info: [
     { name: 'job', value: 'Student', icon: "fa-briefcase" },
     { name: 'location', value: 'Rennes, France', icon: "fa-home" },
-    { name: 'mail', value: 'fistname.name@ens-rennes.fr', icon: "fa-envelope" }],
+    { name: 'mail', value: 'firstname.name@ens-rennes.fr', icon: "fa-envelope" }],
   skills: [
     {
       name: { english: 'Skills', french: 'Compétences' },
