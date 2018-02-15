@@ -4,7 +4,7 @@
  */
 
 var pug = require('pug')
-  , path = __dirname + '/src/cv/layout.pug'
+  , path = __dirname + '/src/index/layout.pug'
   , str = require('fs').readFileSync(path, 'utf8')
   , fn = pug.compile(str, { filename: path, pretty: true });
 

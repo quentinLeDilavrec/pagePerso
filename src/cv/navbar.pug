@@ -1,0 +1,6 @@
+nav.my-nav.w3-teal(style="position: absolute;border-radius: 10px;background: #73AD21;padding: 10px; right: 0%;margin:20px;margin-top:3px; z-index: 100", onClick=" if(this.children[0].style.display=='inline-block') {this.children[0].style.display='none';} else {this.children[0].style.display='inline-block';console.log(this.children[0].display);}")
+  span(style="display:none; vertical-align: middle;")
+    each p in pages
+      span(display='visible', style="padding: 10px; display:inline-block; vertical-align: middle;")
+        a(href='./'+p+'.html', style="text-decoration:none;") #{p}
+  span.fa.w3-xxxlarge.fa-bars(style="display:inline-block; vertical-align: middle;")

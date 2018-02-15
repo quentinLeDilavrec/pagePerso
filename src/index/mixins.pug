@@ -1,0 +1,62 @@
+mixin skillslist(_skills)
+    mixin _elem
+        p #{f(attributes.name,language)}
+        .w3-light-grey.w3-round-xlarge.w3-small
+            .w3-container.w3-center.w3-round-xlarge.w3-teal(style= 'width:' + attributes.ratio) #{attributes.ratio}
+
+    mixin _skillslist
+        if attributes.list!=undifined && attributes.list.length != 0
+            p.w3-large
+                b
+                    i.fa.fa-asterisk.fa-fw.w3-margin-right.w3-text-teal
+                    | #{f(attributes.name,language)}
+                    each e in attributes.list
+                        +_elem(name=e[0], ratio=e[1])
+        else
+            p Warning: no skills here
+
+    each l in _skills
+        +_skillslist(name=l.name, list=l.list)
+        br
+
+mixin print_quick_info(quick_info)
+    each e in quick_info
+        p
+            i.fa.fa-fw.w3-margin-right.w3-large.w3-text-teal(class=e.icon)
+            | #{e.value}
+
+mixin print_curiculum(_curiculum)
+    each curi_elem in _curiculum
+        .w3-container.w3-card.w3-white.w3-margin-bottom
+            h2.w3-text-grey.w3-padding-16
+              i.fa.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal(class=curi_elem.icon)
+              | #{f(curi_elem.name,language)}
+            -var i = 0
+            each v in curi_elem.values
+              .w3-container
+                h5.w3-opacity
+                  b #{f(v.name,language)}
+                h6.w3-text-teal
+                  i.fa.fa-calendar.fa-fw.w3-margin-right
+                  | #{v.date.value}
+                  if (v.date.current==true)
+                    span.w3-tag.w3-teal.w3-round Current
+                p
+                  | Lorem ipsum dol
+                if (i+1 < curi_elem.values.length)
+                  -i++
+                  hr
+                else
+                  br
+
+
+mixin sel_lang(obj)
+  -var language = 'english'
+  if (obj === Object)
+    -var tmp = obj[language]
+    if (tmp == undefined)
+      | #{obj['english']}
+    else
+      | #{tmp}
+  else
+    | #{obj}
